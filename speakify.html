@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakify 🗣️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="speakify.css">
+    <script src="speakify.js"></script>
+</head>
+<body>
+    <div id="speakify-interface">
+        <header>
+            <h1>
+                <span class="gradient">Speakify</span>
+                <span class="emoji"></span>
+            </h1>
+            <p>Conhecimento é uma arma, e eu tenho um arsenal 🔥</p>
+        </header>
+        
+        
+        <section id="lesson-bubbles">
+            <span>Add content here</span>
+        </section>
+        
+        <footer>
+            <div id="footer_content">
+                <div class="credits">
+                    <a href="https://discord.gg/platformdestroyer" target="_blank" class="footer-link gradient">
+                        Platform Destroyer
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <input type="checkbox" id="toggle-menu">
+
+    <div class="menu">
+        <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+        <ul>
+            <li><a href="https://cmsphacks.xyz/tutoriais">Tutoriais</a></li>
+            <li><button id="credits-btn" class="credit-button">Créditos</button></li>
+            <li><button>Authorize / Logout</button></li>
+        </ul>
+    </div>
+
+    <dialog id="donate">
+        <h2>Doe!<br>Ajude o Speakify</h2>
+        <p>Sua contribuição é necessária para mantermos o nosso projeto em funcionamento</p>
+        <p>Com a partir de R$ 1,00 você consegue ajudar o Speakify se manter no ar!</p>
+        <button id="donate-close"><i class="fa-solid fa-x"></i></button>
+        <button class="gradiente"><a href="https://pixgg.com/thigassp" style="text-decoration: none;">Doar</a></button>
+    </dialog>
+
+    <dialog id="credits">
+        <h2>Créditos:</h2>
+        <p>Script feito por <a href="https://discord.com/users/769197514363764736">Flowings</a></p>
+        <p>Site por <a href="https://discord.com/users/830829865178759169">Ruan</a> com ajuda de <a href="https://discord.com/users/1240722695633768489">Lamen Blake</a><br><br>❤</p>
+        <button id="credits-close"><i class="fa-solid fa-x"></i></button>
+    </dialog>
+
+
+</body>
+</html>

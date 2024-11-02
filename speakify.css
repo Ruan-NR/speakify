@@ -1,0 +1,355 @@
+:root {
+    --background-color: rgb(15, 15, 15); /* Cor de fundo da página */
+    --interface-background: rgb(15, 15, 15); /* Cor de fundo da interface */
+    --border-color: rgb(55, 55, 55); /* Cor da borda */
+    --text-color: #C9D1D9; /* Cor do texto principal */
+    --secondary-text-color: #8B949E; /* Cor secundária do texto */
+    --separator-color: #444D56; /* Cor da barra separadora */
+    --lesson-background: #323232; /* Fundo da seção das lições */
+    --footer-background: #323232; /* Fundo do rodapé */
+    --link-color: transparent; /* Cor do link */
+    --link-gradient: linear-gradient(320deg, rgb(58, 58, 255), rgb(0, 255, 234)); /* Gradiente do link */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color); 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color); 
+}
+
+#speakify-interface {
+    background-color: var(--interface-background);
+    border-radius: 12px;
+    width: 95%; 
+    height: 83%; /* Ajusta a altura para caber na tela, subtraindo margens */
+    max-width: 1200px; 
+    padding: 30px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px 0; 
+}
+
+header h1 {
+    font-size: 32px; 
+    margin: 0; 
+    background: var(--link-gradient); 
+    background-size: 150%; 
+    animation: gradientAnimation 5s ease infinite; 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: var(--link-color); 
+    display: inline-block; 
+}
+
+header p {
+    font-size: 16px; 
+    margin: 20px 0 20px; 
+    color: var(--secondary-text-color); 
+}
+
+.separator {
+    height: 1px;
+    background-color: var(--separator-color); 
+    margin: 20px 0; 
+}
+
+#lesson-bubbles { 
+    margin: 0px 0; 
+    padding: 24px;
+    background-color: var(--lesson-background); 
+    border-radius: 12px; 
+    color: var(--text-color); 
+    font-weight: bold; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 80px);
+}
+
+footer {
+    margin-top: 20px; 
+    padding: 15px 20px; 
+    background: var(--footer-background); 
+    backdrop-filter: blur(10px); 
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.credits {
+    font-size: 14px; 
+    color: var(--text-color); 
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.footer-link {
+    display: inline-block; 
+    color: var(--link-color); 
+    text-decoration: none; 
+    margin-left: 10px; 
+    font-size: 16px; 
+    background: var(--link-gradient); 
+    background-size: 150%; 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    animation: gradientAnimation 5s ease infinite; 
+    transition: text-decoration 0.3s ease; 
+}
+
+.footer-link:hover {
+    text-decoration: underline; 
+}
+
+.emoji {
+    font-size: 36px; 
+    display: inline-block; 
+    color: var(--text-color); 
+    margin-left: 8px; 
+}
+
+.footer-link i {
+    font-size: 13px; 
+    margin-left: 5px; 
+}
+
+.section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.menu {
+    border-radius: 12px;
+    width: 250px;
+    min-width: 100px;
+    max-width: 60%; 
+    height: 87vh;
+    color: white;
+    padding: 30px;
+    position: fixed;
+    top: -80;
+    left: 100%;
+    transition: all .5s;
+}
+
+.menu ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.menu label {
+    position: fixed;
+    right: 230px;
+    top: 30px;
+    cursor: pointer;
+    transition: all .5s;
+    display: none;
+}
+
+.menu a {
+    color: white; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.menu a:hover {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+.menu button, dialog button.gradiente {
+    background: var(--link-gradient);
+    border: 2px solid var(--link-gradient);
+    border-radius: 12px; 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    background-size: 150%;
+    animation: gradientAnimation 5s ease infinite; 
+    transition: text-decoration 0.3s ease;
+    margin-top: 5px;
+}
+
+.menu button.credit-button {
+    background: var(--background-color);
+    padding: 0;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+    animation: none;
+    background-size: 0;
+    font-family: "Montserrat";
+}
+
+.menu button.credit-button:hover {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+#toggle-menu {
+    display: none;
+}
+
+#toggle-menu:not(:checked) + .menu {
+    left: 85%;
+}
+
+@media (max-width: 768px) {
+
+    #toggle-menu:not(:checked) + .menu {
+        left: 100%;
+    }
+
+    #toggle-menu:checked + .menu label {
+        right: 40%;
+    }
+
+    #toggle-menu:checked + .menu {
+        left: 45%; /* Ajuste para a posição do menu */
+    }
+    
+    .container {
+        flex-direction: column; /* Mantém o layout em coluna */
+    }
+    
+    .menu label {
+        position: fixed;
+        right: 20px;
+        top: 30px;
+        cursor: pointer;
+        transition: all .5s;
+        display: inline-flex;
+    }
+    
+    .menu ul {
+        padding: 0;
+        margin-top: 60px; /* Aumentado para evitar sobreposição */
+        list-style: none;
+    }
+
+    .menu li {
+        padding: 8px 0; /* Ajustado para um espaçamento melhor */
+        cursor: pointer;
+        margin-top: 15px; /* Reduzido para um layout mais compacto */
+    }
+    
+    .menu {
+        background-color: var(--interface-background);
+        box-sizing: border-box;
+        border: 1px solid var(--background-color); 
+        border-radius: 12px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); 
+        height: 97vh;
+    }
+
+    
+    
+}
+
+label {
+    background-color: var(--interface-background);
+    box-sizing: border-box;
+    border: 1px solid var(--border-color); 
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / .4);
+}
+
+dialog {
+    background-color: var(--interface-background);
+    box-sizing: border-box;
+    border: 1px solid var(--background-color); 
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    opacity: 0; /* Começa invisível */
+    transform: scale(0.8); /* Começa menor */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
+    display: none; /* Não exibido inicialmente */
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+}
+
+dialog[open] {
+    opacity: 1; /* Torna visível quando aberto */
+    transform: scale(1); /* Tamanho original */
+    display: block; /* Exibe o diálogo */
+}
+
+dialog a {
+    color: white;
+}
+
+dialog a:hover {
+    color: rgba(255, 255, 255, 0.7); 
+}
+
+#credits-close, #donate-close {
+    background-color: var(--interface-background);
+    border: none; /* Torna a borda invisível */
+    outline: none;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    position: fixed;
+    right: 8px;
+    top: 15px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#donate-close i {
+    color: white;
+}
+
+dialog h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
