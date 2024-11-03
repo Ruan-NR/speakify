@@ -238,11 +238,11 @@ footer {
     }
 
     #toggle-menu:checked + .menu {
-        left: 45%; /* Ajuste para a posição do menu */
+        left: 45%; 
     }
 
     .container {
-        flex-direction: column; /* Mantém o layout em coluna */
+        flex-direction: column; 
     }
 
     .menu label {
@@ -256,14 +256,14 @@ footer {
 
     .menu ul {
         padding: 0;
-        margin-top: 60px; /* Aumentado para evitar sobreposição */
+        margin-top: 60px;
         list-style: none;
     }
 
     .menu li {
-        padding: 8px 0; /* Ajustado para um espaçamento melhor */
+        padding: 8px 0; 
         cursor: pointer;
-        margin-top: 15px; /* Reduzido para um layout mais compacto */
+        margin-top: 15px; 
     }
 
     .menu {
@@ -300,19 +300,19 @@ dialog {
     border-radius: 10px;
     color: white;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-    opacity: 0; /* Começa invisível */
-    transform: scale(0.8); /* Começa menor */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transição suave */
-    display: none; /* Não exibido inicialmente */
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    display: none; 
     text-align: center;
     padding: 30px;
     width: 300px;
 }
 
 dialog[open] {
-    opacity: 1; /* Torna visível quando aberto */
-    transform: scale(1); /* Tamanho original */
-    display: block; /* Exibe o diálogo */
+    opacity: 1; 
+    transform: scale(1); 
+    display: block; 
 }
 
 dialog a {
