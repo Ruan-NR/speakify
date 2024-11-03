@@ -1,38 +1,39 @@
 :root {
-    --background-color: rgb(15, 15, 15); /* Cor de fundo da página */
-    --interface-background: rgb(15, 15, 15); /* Cor de fundo da interface */
-    --border-color: rgb(55, 55, 55); /* Cor da borda */
-    --text-color: #C9D1D9; /* Cor do texto principal */
-    --secondary-text-color: #8B949E; /* Cor secundária do texto */
-    --separator-color: #444D56; /* Cor da barra separadora */
-    --lesson-background: #323232; /* Fundo da seção das lições */
-    --footer-background: #323232; /* Fundo do rodapé */
-    --link-color: transparent; /* Cor do link */
-    --link-gradient: linear-gradient(320deg, rgb(58, 58, 255), rgb(0, 255, 234)); /* Gradiente do link */
+    --background-color: rgb(15, 15, 15);
+    --interface-background: rgb(15, 15, 15);
+    --border-color: rgb(55, 55, 55);
+    --text-color: #C9D1D9;
+    --secondary-text-color: #8B949E;
+    --separator-color: #444D56;
+    --lesson-background: #323232;
+    --footer-background: #323232;
+    --link-color: transparent;
+    --link-gradient: linear-gradient(320deg, rgb(58, 58, 255), rgb(0, 255, 234));
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Base para rem */
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--background-color); 
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color); 
+    background-color: var(--background-color);
 }
 
 #speakify-interface {
     background-color: var(--interface-background);
     border-radius: 12px;
-    width: 95%; 
-    height: 83%; /* Ajusta a altura para caber na tela, subtraindo margens */
-    max-width: 1200px; 
-    padding: 30px; 
+    width: 95%;
+    height: 83%; /* Ajusta a altura para caber na tela */
+    max-width: 1200px;
+    padding: 30px;
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -49,116 +50,119 @@ body {
 }
 
 header {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 10px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 }
 
 header h1 {
-    font-size: 32px; 
-    margin: 0; 
-    background: var(--link-gradient); 
-    background-size: 150%; 
-    animation: gradientAnimation 5s ease infinite; 
-    -webkit-background-clip: text; 
-    background-clip: text; 
-    color: var(--link-color); 
-    display: inline-block; 
+    font-size: 2rem; /* 32px */
+    margin: 0;
+    background: var(--link-gradient);
+    background-size: 150%;
+    animation: gradientAnimation 5s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: var(--link-color);
+    display: inline-block;
 }
 
 header p {
-    font-size: 16px; 
-    margin: 20px 0 20px; 
-    color: var(--secondary-text-color); 
+    font-size: 1rem; /* 16px */
+    margin: 20px 0;
+    color: var(--secondary-text-color);
 }
 
 .separator {
     height: 1px;
-    background-color: var(--separator-color); 
-    margin: 20px 0; 
+    background-color: var(--separator-color);
+    margin: 20px 0;
 }
 
-#lesson-bubbles { 
-    margin: 0px 0; 
+#lesson-bubbles {
+    margin: 0 auto;
     padding: 24px;
-    background-color: var(--lesson-background); 
-    border-radius: 12px; 
-    color: var(--text-color); 
-    font-weight: bold; 
+    background-color: var(--lesson-background);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: calc(100% - 80px);
+    width: 80%;
 }
 
 footer {
-    margin-top: 20px; 
-    padding: 15px 20px; 
-    background: var(--footer-background); 
-    backdrop-filter: blur(10px); 
-    border-radius: 8px; 
+    margin: auto;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: var(--footer-background);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
 }
 
 .credits {
-    font-size: 14px; 
-    color: var(--text-color); 
+    font-size: 14px;
+    color: var(--text-color);
     display: flex;
-    justify-content: space-between; 
-    width: 100%; 
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer-link {
-    display: inline-block; 
-    color: var(--link-color); 
-    text-decoration: none; 
-    margin-left: 10px; 
-    font-size: 16px; 
-    background: var(--link-gradient); 
-    background-size: 150%; 
-    -webkit-background-clip: text; 
-    background-clip: text; 
-    animation: gradientAnimation 5s ease infinite; 
-    transition: text-decoration 0.3s ease; 
+    display: inline-block;
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 1rem; /* 16px */
+    background: var(--link-gradient);
+    background-size: 150%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientAnimation 5s ease infinite;
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .footer-link:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .emoji {
-    font-size: 36px; 
-    display: inline-block; 
-    color: var(--text-color); 
-    margin-left: 8px; 
+    font-size: 36px;
+    display: inline-block;
+    color: var(--text-color);
+    margin-left: 8px;
 }
 
 .footer-link i {
-    font-size: 13px; 
-    margin-left: 5px; 
+    font-size: 13px;
+    margin-left: 5px;
 }
 
 .section {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 .menu {
+    border-color: var(--background-color);
     border-radius: 12px;
     width: 250px;
     min-width: 100px;
-    max-width: 60%; 
+    max-width: 60%;
     height: 87vh;
     color: white;
     padding: 30px;
     position: fixed;
-    top: -80;
-    left: 100%;
-    transition: all .5s;
+    top: 20vh;
+    left: 8%;
+    transition: all 0.5s;
 }
 
 .menu ul {
@@ -176,31 +180,31 @@ footer {
     right: 230px;
     top: 30px;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.5s;
     display: none;
 }
 
 .menu a {
-    color: white; 
-    text-decoration: none; 
-    transition: background-color 0.3s, color 0.3s; 
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .menu a:hover {
-    color: rgba(255, 255, 255, 0.5); 
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .menu button, dialog button.gradiente {
     background: var(--link-gradient);
     border: 2px solid var(--link-gradient);
-    border-radius: 12px; 
-    color: white; 
-    font-size: 16px; 
-    padding: 10px 20px; 
-    cursor: pointer; 
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem; /* 16px */
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    cursor: pointer;
     background-size: 150%;
-    animation: gradientAnimation 5s ease infinite; 
-    transition: text-decoration 0.3s ease;
+    animation: gradientAnimation 5s ease infinite;
+    transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
     margin-top: 5px;
 }
 
@@ -210,27 +214,21 @@ footer {
     border-radius: 0;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
     animation: none;
     background-size: 0;
     font-family: "Montserrat";
 }
 
 .menu button.credit-button:hover {
-    color: rgba(255, 255, 255, 0.5)
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #toggle-menu {
     display: none;
 }
 
-#toggle-menu:not(:checked) + .menu {
-    left: 85%;
-}
-
 @media (max-width: 768px) {
-
     #toggle-menu:not(:checked) + .menu {
         left: 100%;
     }
@@ -242,20 +240,20 @@ footer {
     #toggle-menu:checked + .menu {
         left: 45%; /* Ajuste para a posição do menu */
     }
-    
+
     .container {
         flex-direction: column; /* Mantém o layout em coluna */
     }
-    
+
     .menu label {
         position: fixed;
         right: 20px;
         top: 30px;
         cursor: pointer;
-        transition: all .5s;
+        transition: all 0.5s;
         display: inline-flex;
     }
-    
+
     .menu ul {
         padding: 0;
         margin-top: 60px; /* Aumentado para evitar sobreposição */
@@ -267,30 +265,28 @@ footer {
         cursor: pointer;
         margin-top: 15px; /* Reduzido para um layout mais compacto */
     }
-    
+
     .menu {
         background-color: var(--interface-background);
         box-sizing: border-box;
-        border: 1px solid var(--background-color); 
+        border: 1px solid var(--background-color);
         border-radius: 12px;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); 
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
         height: 97vh;
+        top: 0vh;
     }
-
-    
-    
 }
 
 label {
     background-color: var(--interface-background);
     box-sizing: border-box;
-    border: 1px solid var(--border-color); 
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     width: 40px;
     height: 40px;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 dialog::backdrop {
@@ -300,7 +296,7 @@ dialog::backdrop {
 dialog {
     background-color: var(--interface-background);
     box-sizing: border-box;
-    border: 1px solid var(--background-color); 
+    border: 1px solid var(--background-color);
     border-radius: 10px;
     color: white;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
